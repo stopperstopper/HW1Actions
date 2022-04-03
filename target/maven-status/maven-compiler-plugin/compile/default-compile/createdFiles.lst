@@ -1,0 +1,4 @@
+webDriverFactory\Browsers.class
+webDriverFactory\AbstractCloneWebDriver.class
+webDriverFactory\WebDriverFactory.class
+pages\MainPage.class
