@@ -55,7 +55,7 @@ public class MainTests {
    */
   @Test
   @Order(1)
-  public  void validMainPage() throws InterruptedException {
+  public  void validMainPage() {
     preSet();
     Assert.assertEquals("Авторские онлайн‑курсы для профессионалов",mainPage.headerMainPage.getText());
     logger.info("Valid main page");
