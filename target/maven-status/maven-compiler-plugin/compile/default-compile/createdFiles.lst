@@ -1,9 +1,0 @@
-webdriverfactory\WebDriverFactory.class
-garbage\ListCourses.class
-garbage\EnumMonth.class
-pages\FilterElementNameCourses.class
-garbage\CoursePage.class
-webdriverfactory\AbstractCloneWebDriver.class
-webdriverfactory\Environment.class
-annotation\AnotationActions.class
-pages\MainPage.class
