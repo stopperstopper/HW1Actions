@@ -1,0 +1,71 @@
+   @FindBy(css = ".course-header2__title")
+   public WebElement courseTitle; //Заголовок курса
+
+
+ // -----kod Pasha B дата курсов
+//    public List<LocalDate> getDateCourses() {
+//        List<LocalDate> dates = listCourses.stream()
+//                .map(course -> {
+//                    WebElement data = course.findElement(By.cssSelector(".lessons__new-item-start"));
+//                    String dataString = data.getText();
+//                    String[] dataCoursesList = dataString.split("\\s+");
+////                    String europeanDatePattern = "dd.MM.yyyy";
+////                    DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
+//                    EnumMonth month = null;
+//                    for (EnumMonth enumMonth : EnumMonth.values()) {
+//                        if (enumMonth.getName().equals(dataCoursesList[1])) {
+//                            month = enumMonth;
+//                            break;
+//                        }
+//                    }
+//                    //                    LocalDate.parse(dataString,europeanDateFormatter);
+//                    assert month != null;
+//
+//                    return LocalDate.of(LocalDate.now().getYear(), month.getMonthNumber(), Integer.parseInt(dataCoursesList[0]));
+//
+//                }).sorted().collect(Collectors.toList());
+//        //dates.get(0).compareTo(dates.get(1));
+//        return dates;
+//    }
+//----------------------------
+
+    public MainPage moveToElementAction(Actions actions, WebElement element) {
+        actions.moveToElement(element).perform();
+        return this;
+    }
+
+//    public CoursePage moveToElementAndClickAction(Actions actions, WebElement element) {
+//        actions.moveToElement(element).build().perform();
+//        element.click();
+//        return new CoursePage(driver);
+//            }
+    public void checkTitle(String expectedValue) {
+        Assertions.assertEquals(expectedValue, this.courseTitle.getText());
+    }
+
+    ---test is MainTests
+    //    HighLight.highLightOff(mainPage.firstCourse, driver);
+    //   // driver.findElement(By.id("su")).click();
+        //mainPage.moveToElementAndClickAction(actions, mainPage.firstCourse);
+       // Thread.sleep(3000);
+        //
+
+    //actions.build()
+        //         .moveToElementAction(actions, mainPage.testingSubmenuItem)
+    //            .moveToElementAction(actions, mainPage.dropDownTrigger)
+    //            .moveToElementAndClickAction(actions, mainPage.qaCourseMenuElement);
+    //actions.moveToElement(mainPage.coursesMenuItem)
+    //        .pause(1000)
+    //        .moveToElement(mainPage.testingSubmenuItem)
+    //        .pause(1000)
+    //        .moveToElement(mainPage.dropDownTrigger)
+    //        .pause(1000)
+    //        .moveToElement(mainPage.qaCourseMenuElement)
+    //        .build()
+    //        .perform();
+
+
+               // .checkTitle("QA Engineer. Basic");
+
+    //HighLight.highLightOn(mainPage.headerMainPage, driver);
+    //mainPage.headerMainPage.click();
